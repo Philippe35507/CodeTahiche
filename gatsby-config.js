@@ -1,6 +1,11 @@
 module.exports = {
 
     siteMetadata: {
-        title: `Code Tahiche`
-    }
+        title: "CODE TAHICHE",
+        author: "Code Tahiche"
+    },
+
+    plugins: [
+        "gatsby-plugin-sass"
+    ]
 }

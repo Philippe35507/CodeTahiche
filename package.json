@@ -4,12 +4,16 @@
   "description": "Gatsby Site from Scratch !",
   "main": "index.js",
   "dependencies": {
+    "env-cmd": "^10.0.1",
     "gatsby": "^2.18.22",
+    "gatsby-plugin-sass": "^2.1.27",
+    "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
   "devDependencies": {},
   "scripts": {
+    "develop": "env-cmd .env.development gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
