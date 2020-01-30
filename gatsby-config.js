@@ -2,10 +2,11 @@ module.exports = {
 
     siteMetadata: {
         title: "CODE TAHICHE",
-        author: "Powered by Gatsby, c 2020"
+        author: "Powered by Gatsby, © 2020"
     },
 
     plugins: [
+        "gatsby-plugin-react-helmet",
         "gatsby-plugin-sass",
 
         {
@@ -34,7 +35,16 @@ module.exports = {
                     }
                 ]
             }
-        }
+        },
+        {
+            resolve: "gatsby-plugin-use-dark-mode",
+            options: {
+               classNameDark: "dark-mode",
+               classNameLight: "light-mode",
+               storageKey: "darkMode",
+               minify: true,
+            },
+          }
         
     ]
 }

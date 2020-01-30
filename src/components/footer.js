@@ -16,7 +16,7 @@ const Footer = () => {
 
     return (
         <footer className={footerStyles.footer}>
-            <p>{data.site.siteMetadata.author}</p>
+            <p className={footerStyles.mentionFooter}>{data.site.siteMetadata.author}</p>
         </footer>
     )
 }

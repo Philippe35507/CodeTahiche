@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-/*import Head from "../components/head"*/
+import Head from "../components/head"
 
 export const query = graphql`
     query($slug: String!) {
@@ -18,7 +18,7 @@ export const query = graphql`
 const Blog = (props) => {
     return(
         <Layout>
-           
+           <Head title={props.data.markdownRemark.frontmatter.title} />
             <h1>{props.data.markdownRemark.frontmatter.title}</h1>
             <p>{props.data.markdownRemark.frontmatter.date}</p>
             <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}></div>
@@ -27,4 +27,3 @@ const Blog = (props) => {
 }
 export default Blog
 
-/*  <Head title={props.data.markdownRemark.frontmatter.title}/>*/

@@ -1,30 +1,57 @@
 .posts {
     list-style-type: none;
     margin: 0;
-}
 
-.post {
+    }
+
+.post {              // title post + date post
     margin: 1rem 0;
 
-    a {
-        background: #f4f4f4;
-        color: #000000;
+    a {                      // bandeau noir
+        background: rgba(39, 39, 36, 0.507);
+        color: #f5dbdbdc;
         display: block;
-        padding: 1rem;
-        text-decoration: none;
-    }
+        padding: 0.1rem 0.2rem;
+        text-decoration: none;                
+        align-content: center;
+       
+        }     
 
-    a:hover {
-        background: #e4e4e4;
-    }
+        a:hover {                      // list posts               
+            background: rgba(70, 67, 67, 0);   // list posts: suppr transparence
+            
+                h2 {               // title post : hover title
+                    color: rgba(241, 16, 16, 0.856);
+                }
+      
+                p {                // title post: hover date
+                    color: rgba(241, 16, 16, 0.856);
+                }
+        }  
 
-    h2 {
+        
+
+    h2 {                       // title post
+        color: white;
         margin-bottom: 0;
     }
 
-    p {
+    p {                         // date post
         color: #777777;
         font-size: .8rem;
         font-style: italic;
     }
+    
+    
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: lightgrey;  // titles MD
+}
+
+p {
+    font-size: 1.5rem;
+    color: white;     // p MD
+    
 }
