@@ -67,9 +67,8 @@ ajouter l'élément ` <Head title="nom de votre page"> `  juste en desous de l'�
 Pour les templates: 
 toujours sous l'élément `<Layout>` , il faut ajouter :
 
-                                                                       
- `       <Head title={props.data.markdownRemark.frontmatter.title} />   `
-                                                                   
+
+`<Head title={props.data.markdownRemark.frontmatter.title} />`
 
 
 De cette façon, l'onglet de chaque post ouvert par l'utilisateur affichera automatiquement le titre du post en question.

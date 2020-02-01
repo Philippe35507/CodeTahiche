@@ -7,7 +7,7 @@ date: "31/01/2020"
 
 Pour afficher le titre de votre site de façon dynamique et ainsi augmenter vos performances SEO, il faut d'abord modifier le fichier gatsby-config.sys. C'est à partir de ce fichier que seront lues les données. 
 
-![module exports](module-exports.png)
+![module-exports](module-exports.png)
 
 
 Placez de préférence votre module.exports au début de votre fichier gatsby.config.sys. Enlevez la vurgule à la fin s'il n'y a aucune ligne de code ensuite. C'est dans ce même fichier que vous listerez vos plugins si ce n'est pas déjà le cas.

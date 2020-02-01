@@ -5,8 +5,10 @@
     margin: 1.5rem;
     padding: 0.5rem;
     font-size: 2rem;
-    text-decoration: none;
     text-align: center;
+        
+    text-shadow: 3px 3px 35px rgba(222, 245, 12, 0.739);
+   
 }
 
 .nav-list {
@@ -22,11 +24,13 @@
     font-size: 1.5rem;
     margin-right: 1.5rem;
     text-decoration: none;
+    text-shadow: 2px 2px 10px red;
 }
 
 
 .nav-item:hover {
     color:  rgb(241, 238, 59);
+    text-shadow: 2px 2px 10px rgb(208, 247, 36);
 }
 
 .active-nav-item {
