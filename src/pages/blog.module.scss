@@ -48,7 +48,7 @@
 // MARKDOWN :
 
 h1 {
-    font-size: 4rem;        // titles MD
+    font-size: 3.5rem;        // titles MD
     color: lightgrey;  
     padding: 8rem 0 0 0 ;
 }
@@ -56,18 +56,18 @@ h1 {
 p {
     font-size: 1.4rem;        // p MD
     color: white;     
-    padding: 1rem 2rem 1rem 4rem;
+    padding: 1rem 2rem 1rem 0;
 }
 
 li, ol, ul {                  // li ol ul  MD
     font-size: 2rem;
     color: rgb(196, 193, 51); 
-    margin-left: 0.8rem;
+    margin-left: -0.3rem;
     
             p {
                 font-size: 1.4rem;      // p MD
                 color: white;    
-                padding: 1rem 2rem 1rem 4rem;
+                
     }
 }
 
@@ -78,3 +78,6 @@ code {
 }
 
 
+a {
+    color: yellow;
+}

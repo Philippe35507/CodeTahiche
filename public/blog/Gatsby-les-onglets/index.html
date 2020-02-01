@@ -1,0 +1,140 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.d9f94082c08c6bb3a91e.css">.header-module--title--2Ml1U{color:#f1ee3b;margin:1.5rem;padding:.5rem;font-size:2rem;text-decoration:none;text-align:center}.header-module--nav-list--1ob9s{display:flex;justify-content:center;list-style-type:none;padding:4.3rem}.header-module--nav-item---V6P3{color:#afadad;font-size:1.5rem;margin-right:1.5rem;text-decoration:none}.header-module--active-nav-item--2MbjT,.header-module--nav-item---V6P3:hover{color:#f1ee3b}.footer-module--footer--cvZzG{margin-top:3rem}.footer-module--mention-footer--2HvMl{color:#a971dd;text-align:center}html{background-color:#3a2717}.layout-module--container--3BoYY{margin:0 auto;max-width:950px;padding:1rem;display:flex;flex-direction:column;min-height:100vh}.layout-module--content--zUuRj{flex-grow:1}.blog-module--posts--3uQTR{list-style-type:none;margin:0}.blog-module--post--2PWe7{margin:1rem 0}.blog-module--post--2PWe7 a{background:rgba(39,39,36,.507);color:rgba(245,219,219,.86);display:block;padding:.1rem .2rem;text-decoration:none;align-content:center}.blog-module--post--2PWe7 a:hover{background:rgba(70,67,67,0)}.blog-module--post--2PWe7 a:hover .blog-module--date-post--a6wlw,.blog-module--post--2PWe7 a:hover .blog-module--titre-post--1g1uN{color:rgba(241,16,16,.856)}.blog-module--post--2PWe7 .blog-module--titre-post--1g1uN{font-size:1.8rem;color:#fff;margin-bottom:0}.blog-module--post--2PWe7 .blog-module--date-post--a6wlw{color:#777;font-size:.8rem;font-style:italic}h1{font-size:4rem;color:#d3d3d3;padding:8rem 0 0}p{font-size:1.4rem;color:#fff;padding:1rem 2rem 1rem 4rem}li,ol,ul{font-size:2rem;color:#c4c133;margin-left:.8rem}li p,ol p,ul p{font-size:1.4rem;color:#fff;padding:1rem 2rem 1rem 4rem}code{color:#c2830e;background:#000;font-size:1.7rem}</style><meta name="generator" content="Gatsby 2.18.22"/><title data-react-helmet="true">Gatsby: configuration des onglets de navigation | CODE TAHICHE</title><link as="script" rel="preload" href="/webpack-runtime-77e810434dea60f747a5.js"/><link as="script" rel="preload" href="/app-21be49dff44f2c066df7.js"/><link as="script" rel="preload" href="/styles-f3c6f342b53d3d966b41.js"/><link as="script" rel="preload" href="/commons-c79722a3b9ee0168bfe9.js"/><link as="script" rel="preload" href="/component---src-templates-blog-js-b9b2dfe1d9c2d872ba00.js"/><link as="fetch" rel="preload" href="/page-data\blog\Gatsby-les-onglets\page-data.json" crossorigin="anonymous"/></head><body><script>!function(e,a,o){function d(e){document.body.classList.add(e?"dark-mode":"light-mode"),document.body.classList.remove(e?"light-mode":"dark-mode")}var t=window.matchMedia("(prefers-color-scheme: dark)"),r="(prefers-color-scheme: dark)"===t.media,s=null;try{s=localStorage.getItem("darkMode")}catch(e){}var c=null!==s;if(c&&(s=JSON.parse(s)),c)d(s);else if(r)d(t.matches),localStorage.setItem("darkMode",t.matches);else{var l=document.body.classList.contains("dark-mode");localStorage.setItem("darkMode",JSON.stringify(l))}}();</script><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="layout-module--container--3BoYY"><div class="layout-module--content--zUuRj"><div><header><h1 class="header-module--title--2Ml1U">CODE TAHICHE</h1><nav><ul class="header-module--nav-list--1ob9s"><li><a class="header-module--nav-item---V6P3" href="/">Home</a></li><li><a class="header-module--nav-item---V6P3" href="/blog">Blog</a></li><li><a class="header-module--nav-item---V6P3" href="/contact">Contact</a></li><li><a class="header-module--nav-item---V6P3" href="/about">About</a></li></ul></nav></header></div><h1>Gatsby: configuration des onglets de navigation</h1><p>29/01/2020</p><div><p>Bien configurer les onglets permet d'améliorer considérablement votre référencement.Voici la marche à suivre:</p>
+<ol>
+<li>Installer deux plugins gatsby.</li>
+<li>Configurer le fichier gatsby-config.sys.</li>
+<li>Création du composant head.js.</li>
+<li>Importer votre composant dans chacune des pages de votre projet.</li>
+<li>Ajouter l'élément Head.</li>
+</ol>
+<p><br></br></p>
+<ol>
+<li>Installer deux plugins gatsby.</li>
+</ol>
+<p>Il faut installer le plugin gatsby-react-helmet ainsi que le plugin react-helmet par la commande suivante:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 434px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 15.898617511520735%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAiUlEQVQI11WOzQ6CMBCE+wJKf7y01EoQ22IoIngw8f2fa9xCrHr4MrM7k+yyHdfYc0PoFS7r4guVRiXMBv/6T79kBEuhxdx3sC5iSA+E6x0+TuhJp+UF1wQEms9hROsTxtuTshn25BFJm25Y+wt1rbuASWWQyZeEskUz8nD825fsx+evhKqpu/k39jJO2G8oxKQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="npm i gatsby-react-helmet react-helmet"
+        title="npm i gatsby-react-helmet react-helmet"
+        src="/static/00b67cc06369b508ffb90cc3818200fb/4233b/npm-i-helmet.png"
+        srcset="/static/00b67cc06369b508ffb90cc3818200fb/7a748/npm-i-helmet.png 188w,
+/static/00b67cc06369b508ffb90cc3818200fb/1a013/npm-i-helmet.png 375w,
+/static/00b67cc06369b508ffb90cc3818200fb/4233b/npm-i-helmet.png 434w"
+        sizes="(max-width: 434px) 100vw, 434px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<ol start="2">
+<li>Configurer le fichier gatsby-config.sys:</li>
+</ol>
+<p>Ajouter la ligne "gatsby-plugin-react-helmet" en haut de votre liste de plugins (sans oublier la virgule à la fin de la ligne!). </p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 415px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 22.650602409638555%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA5ElEQVQY042OzVaDMBCFs20ptJgUqgVOS4GQ5gdawVarOxfqxvd/mmvCQetOF9+ZO3dyZ0L8xS0Ciz8S/GIe3v3U/0IYTRBaEbEES8uCrkFpen10M/JXP3rktTT4FEd8FBoviQBlOTZMww9W8GYxJtMIUy8emFnPVed5/nX+jcuQ0G6OWYYtN2gfDUwv0V2OSPMcO8XRPEjIe4X9QSDZbK2WUJ1EZWelrNGcNcxZ4WCzaaVB3DcnXoSsKvH81mNXF2ieNLjh4K0NnBQu7z245sNC0QrIbo/MHRTVoPXJHayxXBf4AnVdhYQB13djAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="maj-gatsbyconfig-plugin-helmet"
+        title="maj-gatsbyconfig-plugin-helmet"
+        src="/static/d3c441226751dbc49584e075ad2c433f/0a34e/maj-gatsbyconfig-plugin-helmet.png"
+        srcset="/static/d3c441226751dbc49584e075ad2c433f/7a748/maj-gatsbyconfig-plugin-helmet.png 188w,
+/static/d3c441226751dbc49584e075ad2c433f/1a013/maj-gatsbyconfig-plugin-helmet.png 375w,
+/static/d3c441226751dbc49584e075ad2c433f/0a34e/maj-gatsbyconfig-plugin-helmet.png 415w"
+        sizes="(max-width: 415px) 100vw, 415px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<ol start="3">
+<li>Création du composant head.js:</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 750px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 67.40237691001698%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABcklEQVQ4y5VS23KCMBT0vZoARhOSEMB6w9KZjtPH/v9vbTfBW22t+rDsyQCbc3bPSOYWs3IFv96jbncwgahXMFWLfGoJB5FZyLyE4LciKxH/uYWRkBrKrdHsvyi4wXLziUVH8XWHpuux/dhCu4CJ/F/oLMgbp6qGtztY16G0S4T6HdauYVgr3aKY1Xc7OwnKNIZFCFvs+j3m5SuUiV31MP4t8VSvnhOUBX2iRzPr0W6XqFcttK8Q7ZjIOdlAHvy762F8ZMXReAfXLhhSQMYwLj98qsOMQoXy9Mon8yOGCx7D5WWHDn0SHQs9CGaGPEDIc30NkZmT2JFHccy4YznTrBY9tPZQqmUQxLxh1yElPWXSiucZ68jxXa7CrQ4dUXFVGlTcOcNU527DxLk2ZsG0WZM1zyV3NnJ8V1A8BfpT0HEPeWD7ceQXQY7ppvH1MJ44MM/jUz3Y8XtkFoVuoJs+wYQudfBoqn+OHNtOXh75iTW5xjc3wUW/2Grf4QAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="component-head"
+        title="component-head"
+        src="/static/5fa85a39694032a34e121bb53dfd80f3/b8ccf/component-head.png"
+        srcset="/static/5fa85a39694032a34e121bb53dfd80f3/7a748/component-head.png 188w,
+/static/5fa85a39694032a34e121bb53dfd80f3/1a013/component-head.png 375w,
+/static/5fa85a39694032a34e121bb53dfd80f3/b8ccf/component-head.png 750w,
+/static/5fa85a39694032a34e121bb53dfd80f3/beb4a/component-head.png 1125w,
+/static/5fa85a39694032a34e121bb53dfd80f3/3c7f1/component-head.png 1178w"
+        sizes="(max-width: 750px) 100vw, 750px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<ol start="4">
+<li>Importer votre composant dans chacune des pages de votre projet:</li>
+</ol>
+<p>Evidemment, votre import pourra varier selon l'arborescence des répertoires que vous avez choisie.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 511px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.85909980430529%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABiUlEQVQoz41S206DQBTk2XLtssulLLCwLQakpVaMjSZqfFD//4PGw1qradT0YcJZzmYyMzsWExlcP4U3X8AL0rPg+smfO2sitG0Ox+FwvQi2KwwcLzb/HEcYgpkTwyb8JPuN2PJZhry/R0GIVA+lr6FXOyRZA9k/QLZ34KlCs26g2wZhUmFmR/AOZKeklhcsoHYvqHbPiImwLDV0c4OiHiCrBnk3ItEDVHuFy6GFapZYqAoBz39XOOUnig5R2YElNcKQg/ECcboEZ4IUKcTVGn5YIlMKeV1D1hV8yvyUcDpb/jyFPWOUY2jycryEMqQsp9mlHKd52lGmk9WLC8IsMveOcL+ztcIoB4trAtkQJZgowOk7n2ZSHNDZZxJznkEkuQFPJMJIgsfSzDwtTUuMQiYk6ttXrPbvSOkxls0O/eYBC72F3r8hXW4RhBnKlcb4NGB8HLDZ97gaO3TXLbb3a3RjT+qyL8LsYE8Ye46pTmSWpjY0e8GnNftQHQP3gJM6Wcdi/1vk8wv/AVreAIFTYsvJAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="import-head"
+        title="import-head"
+        src="/static/07adec23045a44fecf4cb260550e41bc/2d246/import-head.png"
+        srcset="/static/07adec23045a44fecf4cb260550e41bc/7a748/import-head.png 188w,
+/static/07adec23045a44fecf4cb260550e41bc/1a013/import-head.png 375w,
+/static/07adec23045a44fecf4cb260550e41bc/2d246/import-head.png 511w"
+        sizes="(max-width: 511px) 100vw, 511px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<ol start="5">
+<li>Ajouter l'élément <Head /> pour chaque page et pour votre template le cas échéant:</li>
+</ol>
+<p>Pour les pages:
+ajouter l'élément <code>&#x3C;Head title="nom de votre page"></code>  juste en desous de l'élément <code>&#x3C;Layout></code></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 439px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 57.85876993166287%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABr0lEQVQoz31S2XLiMBD0cxKfQliy5SOYwxh7OUyxG2C3CJvaPCRV+f+v6YzFmSXw0DVjyd3qOQzXi8BYjCZ6rZhwirYbwPZCOASPSTjuLncptxy6c+XunzMY9eAFy/IdkRhiOFpiMn1GNf6Ncb3F6s8H2iqHSjqoSwZJ/zyqEnmfw7wm2Lzq8QRxtUZ3vsXjbAM/KiFYFzY5t+wdyfVO5CbfOQwofhU19AGV0Y4LiGyMKK+RdQboxRliRe3wE03S0I7k6Xsvdi5qHBLL9nF3z6HSPp4mPWzmfWx+jiCTHKYtqHdKE01LkPDBXXAhuhcMYdOBI7rYrqZ4Ww9R9rooOs8YZSvUxQvSHwss/86w2ExQPU3h+hnCQQ2HhvetQ/0KCXOuqPkKrEXT9FLagJTOUj1dLmP4KgFrK23C2W/CFcFQXzg0IE594zyElNRbEcHck0wa0AOV3MRrfTwJkgOLeiX7NapiiH+/cryuC9SzisrrEEFcrMixsnOHD/RaiyVQ7R7tltCi2gnhzhS4JxzE/l+R72CEQUMIwbzoguBccXFTMFaC+nLYseC4ErfKuoVPKXYz89lBVrwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="head-title"
+        title="head-title"
+        src="/static/21a1513bc68d06ca7bca9ea0e74ecfda/2672c/head-title.png"
+        srcset="/static/21a1513bc68d06ca7bca9ea0e74ecfda/7a748/head-title.png 188w,
+/static/21a1513bc68d06ca7bca9ea0e74ecfda/1a013/head-title.png 375w,
+/static/21a1513bc68d06ca7bca9ea0e74ecfda/2672c/head-title.png 439w"
+        sizes="(max-width: 439px) 100vw, 439px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>Pour les templates:
+toujours sous l'élément <code>&#x3C;Layout></code> , il faut ajouter :</p>
+<p> <code>&#x3C;Head title={props.data.markdownRemark.frontmatter.title} /></code></p>
+<p>De cette façon, l'onglet de chaque post ouvert par l'utilisateur affichera automatiquement le titre du post en question.</p></div></div><footer class="footer-module--footer--cvZzG"><p class="footer-module--mention-footer--2HvMl">Powered by Gatsby, © 2020</p></footer></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/Gatsby-les-onglets";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-21be49dff44f2c066df7.js"],"component---src-templates-blog-js":["/component---src-templates-blog-js-b9b2dfe1d9c2d872ba00.js"],"component---src-pages-about-js":["/component---src-pages-about-js-9773af57adb9fbefa58d.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-ea11e9dbe08449a94018.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-4a66fa2e30d7b8c88ed0.js"],"component---src-pages-index-js":["/component---src-pages-index-js-11bb3dcba1719115ec5a.js"]};/*]]>*/</script><script src="/component---src-templates-blog-js-b9b2dfe1d9c2d872ba00.js" async=""></script><script src="/commons-c79722a3b9ee0168bfe9.js" async=""></script><script src="/styles-f3c6f342b53d3d966b41.js" async=""></script><script src="/app-21be49dff44f2c066df7.js" async=""></script><script src="/webpack-runtime-77e810434dea60f747a5.js" async=""></script></body></html>

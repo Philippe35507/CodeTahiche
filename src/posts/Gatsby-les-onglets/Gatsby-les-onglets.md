@@ -54,7 +54,7 @@ Evidemment, votre import pourra varier selon l'arborescence des répertoires que
 ![import-head](import-head.png)
 
 
-5. Ajouter l'élément <Head /> pour chaque page et pour votre template le cas échéant:
+5. Ajouter l'élément `<Head />` pour chaque page et pour votre template le cas échéant:
 
 Pour les pages: 
 ajouter l'élément ` <Head title="nom de votre page"> `  juste en desous de l'élément ` <Layout> `
