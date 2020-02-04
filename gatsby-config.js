@@ -12,10 +12,25 @@ module.exports = {
         "gatsby-plugin-sass",
 
         {
+            resolve: 'gatsby-plugin-mdx',
+            options:{
+              extensions:[`.mdx`, `.md`]
+            }
+        },
+
+        {
             resolve: "gatsby-source-filesystem",
             options: {
                 name: "src",
                 path: `${__dirname}/src/`
+            }
+        },
+
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "posts",
+                path: `${__dirname}/posts/`
             }
         },
 
